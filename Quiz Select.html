@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+	<title>Select Your Quiz</title>
+	
+	<link rel="stylesheet" type="text/css" href="styles.css">
+	
+	<link href="https://fonts.googleapis.com/css?family=Arvo|PT-Sans" rel="stylesheet">
+	
+	<script>		
+		function openNav() {
+			document.getElementById("navBox").style = "margin-left:2em;margin-right:500em;";
+			document.getElementById("navBox").style = "padding-top:1em;padding-left:0;padding-right:0;";
+			document.getElementById("navBox").style.height = "27em";
+			document.getElementById("navBox").style.width = "13em";
+			document.getElementById("openNav").style.display = "none";
+			document.getElementById("sideNav").style.display = "initial";
+		}
+		
+		function closeNav() {
+			document.getElementById("navBox").style = "margin-right:82em;margin-left:5em;";
+			document.getElementById("navBox").style = "position:absolute;top:0;";
+			document.getElementById("sideNav").style.display = "none";
+			document.getElementById("openNav").style.display = "initial";
+		}
+		
+		function sciencechange() {
+			document.getElementById("science").innerHTML = "Click me!";
+		}
+		
+		function sciencereturn() {
+			document.getElementById("science").innerHTML = "Science&nbsp;&nbsp;&gt;&gt;";
+		}
+		
+		function techchange() {
+			document.getElementById("tech").innerHTML = "Click me!";
+		}
+		
+		function techreturn() {
+			document.getElementById("tech").innerHTML = "Technology&nbsp;&nbsp;&gt;&gt;";
+		}
+
+		function engineerchange() {
+			document.getElementById("engineer").innerHTML = "Click me!";
+		}
+		
+		function engineerreturn() {
+			document.getElementById("engineer").innerHTML = "Engineering&nbsp;&nbsp;&gt;&gt;";
+		}
+		
+		function mathschange() {
+			document.getElementById("maths").innerHTML = "Click me!";
+		}
+		
+		function mathsreturn() {
+			document.getElementById("maths").innerHTML = "Mathematics&nbsp;&nbsp;&gt;&gt;";
+		}
+	</script>
+	
+</head>
+
+<body>
+		
+	<nav>
+		<div id="navBox">
+			<span onclick="openNav()" id="openNav">&#9776;&nbsp;&nbsp;Menu</span>
+			<div id="sideNav">
+				<span onclick="closeNav()" id="cross">&times;</span>
+				
+				<div class="navContents">
+					<p>
+						<img src="STEM Logo.png" alt="STEM" width="30px" height="30px">
+						<a href="Home.html" target="_blank">What is STEM?</a>
+					</p>
+				</div> <!-- END navContents -->
+			</div> <!-- END sideNav -->
+		</div> <!-- END navBox -->
+	</nav>
+		
+	
+	
+	<div class="choice">
+		
+		<p class="choicestem"><a href="Home.html" target="_blank"><img src="STEM.jpg" alt="STEM" width="500em" height="200em" id="stem"></a></p>
+		
+		<div id="choicetopic">
+			<h1>Please choose your topic of interest</h1>
+		</div> <!-- END choicetopic -->
+		
+		<?php include 'memreg.php'; ?>
+		
+		<div class="choiceimgs">
+			<div class="choicesquare1" onmouseover="blur()">
+				<div  class="squareword1">
+					<button id="science" onclick="location.href='Science.html'" onmouseover="sciencechange()" onmouseout="sciencereturn()">Science&nbsp;&nbsp;&gt;&gt;</button>
+				</div><!-- END squareword1 -->
+				<div  class="squareword2">
+					<button id="tech" onclick="location.href='Technology.html'" onmouseover="techchange()" onmouseout="techreturn()">Technology&nbsp;&nbsp;&gt;&gt;</button>
+				</div><!-- END squareword2 -->
+				<div  class="squareword3">
+					<button id="engineer"  onclick="location.href='Engineering.html'" onmouseover="engineerchange()" onmouseout="engineerreturn()">Engineering&nbsp;&nbsp;&gt;&gt;</a></button>
+				</div><!-- END squareword3 -->
+				<div  class="squareword4">
+					<button id="maths"  onclick="location.href='Maths.html'" onmouseover="mathschange()" onmouseout="mathsreturn()">Mathematics&nbsp;&nbsp;&gt;&gt;</button>
+				</div><!-- END squareword4 -->
+				<a href="Science.html" target="blank"><img src="imgs/Science.jpg" alt="Science" class="choiceimg1"></a>
+			</div> <!-- END choicesquare1 -->
+			
+			<div class="choicesquare2">
+				<a href="Technology.html" target="blank"><img src="imgs/Technology.jpg" alt="Technology" class="choiceimg2"></a>
+			</div> <!-- END choicesquare2 -->
+			
+			<div class="choicesquare3">
+				<a href="Engineering.html" target="blank"><img src="imgs/Engineering.jpg" alt="Engineering" class="choiceimg3"></s>
+			</div> <!-- END choicesquare3 -->
+			
+			<div class="choicesquare4">
+				<a href="Maths.html" target="blank"><img src="imgs/Maths.jpg" alt="Maths" class="choiceimg4"></a>
+			</div> <!-- END choicesquare4 -->
+		</div><!-- END choiceimgs -->
+		
+	</div> <!-- END choice -->
+	
+</body>
+
+</html>

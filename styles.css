@@ -1,0 +1,414 @@
+/*CSS Styling*/
+
+* {
+	padding:0;
+	margin:0;
+}
+
+/*All page background*/
+html {
+	background-image:url("background.jpg");
+	background-repeat:no-repeat;
+	background-size:cover;
+	z-index:-1;
+}
+
+/*Navigation icon*/
+#openNav {
+	z-index:999;
+	color:white;
+	font-size:1.5em;
+	display:block;
+	cursor:pointer;
+}
+
+#openNav:hover{
+	color:#ffbebe;
+}
+
+/*Navigation box*/
+#navBox {
+	background:linear-gradient(to bottom, #ff3366, #ff0000);
+	position:absolute;	
+	top:0;
+	padding-top:5em;
+	padding-bottom:1em;
+	padding-right:1em;
+	padding-left:1em;
+	margin-right:83em;
+	margin-left:5em;
+	z-index:9999;
+	overflow-x:hidden;
+	transition:1s;
+}
+
+/*navigation*/
+#sideNav {
+	display:none;
+	margin:0;
+}
+
+/*the cross symbol*/
+#cross {
+	color:#fff;
+	font-size:3em;
+	margin:1em 1em 1em 3.5em;
+	cursor:pointer;
+}
+
+#cross:hover {
+	color: #ff9999;
+}
+
+/*Navigation contents*/
+.navContents p {
+	font-size:2em;
+	margin:0.5em 0.3em 0 0.3em;
+}
+
+.navContents p a{
+	text-decoration:none;
+	color:#fff;
+}
+
+.navContents p a:hover{
+	color:#ffc7c7;
+}
+
+/*login box*/
+.loginmain {
+	background:#ffffff;
+	border-radius:1.3em;
+	padding-left:2em;
+	padding-right:2em;
+	padding-bottom:1em;
+	padding-top:1em;
+	width:23em;
+	margin:auto;
+	font-size:20px;
+	min-width:25%;
+	margin-top:5em;
+}
+
+/*the STEM picture*/
+.main p, .memreg .pic {
+	text-align:center;
+}
+
+/*font styling for the words inside the form*/
+.loginmain #loginform {
+	font-family: 'Arvo', serif;
+}
+
+/*login input box*/
+.loginmain #username, .loginmain #password {
+	height:40px;
+	width:400px;
+	line-height:100px;
+	font-size:20px;
+}
+
+/*submit button*/
+.loginmain #loginform #loginsubmitbutton {
+	background:linear-gradient(to bottom right, #e8e8e8, #b9b9b9);
+	border-radius:0.4em;
+	box-shadow:0.2em 0 0.6em 0;
+	cursor:pointer;
+	position:relative;
+	left:18em;
+	padding:1.3em 1.6em 1.3em 1.6em;
+}
+
+.loginmain #loginform #loginsubmitbutton:hover {
+	background:linear-gradient(to bottom right, #e4e4e4, #d1d1d1);
+}
+
+.loginmain #loginform #loginsubmit {
+	border-style:none;
+	background:none;
+	cursor:pointer;
+	font-size:1.4em;
+	font-family:'Bree Serif', serif, times new roman;
+	font-weight:bold;
+}
+
+.loginmain #loginform #loginsubmit a{
+	text-decoration:none;
+	color:#000000;
+	display:block;
+}
+
+/*reset button*/
+.loginmain #loginform #loginreset {
+	background:linear-gradient(to bottom right, #e8e8e8, #b9b9b9);
+	font-size:1em;
+	border-radius:0.4em;
+	box-shadow:0.2em 0 0.6em 0;
+	cursor:pointer;
+	font-family:'Bree Serif', serif, times new roman;
+	font-weight:bold;
+	position:relative;
+	left:13em;
+	padding:0.8em 1em 0.8em 1em;
+	margin: 0;
+}
+
+.loginmain #loginform #loginreset:hover{
+	background:linear-gradient(to bottom right, #e4e4e4, #d1d1d1);
+}
+
+/*eye button*/
+#loginform #imagechange {
+	position:relative;
+	top:6px;
+	cursor:pointer;	/*to change the cursor when pointed at the mouse*/
+	width:30px; 
+	height:30px; 
+}
+
+/*Member registration box*/
+.memreg {
+	background-color:white;
+	margin:auto;
+	width:30em;
+	font-size:1em;
+	padding:2em;
+	margin-top:2em;
+	border-radius:1.3em;
+}
+
+/*registration title*/
+.memreg h1{
+	text-align:center;
+}
+
+/*register input box*/
+.memreg #name, .memreg #icnumber{
+	height:40px;
+	width:470px;
+	line-height:100px;
+	font-size:20px;
+}
+
+/*words inside the form*/
+.memreg form{
+	font-size:1.4em;
+}
+
+/*registration register button*/
+.memreg #regformconfirm {
+	background:linear-gradient(to bottom right, #e8e8e8, #b9b9b9);
+	font-size:0.8em;
+	border-radius:5px;
+	box-shadow:1px 0 8px 0;
+	cursor:pointer;
+	font-family:'Bree Serif', serif, times new roman;
+	font-weight:bold;
+	padding:0.5em;
+}
+
+.memreg #regformconfirm:hover{
+	background:linear-gradient(to bottom right, #e4e4e4, #d1d1d1);
+}
+
+/*tips for name and I/C number */
+#nametips, #ictips {
+	font-size:0.7em;
+	color:red;
+}
+
+/*birthday and gender*/
+#birthday, #gender {
+	font-size:1em;
+}
+
+#yourbirth, #yourgender {
+	font-size:1em;
+}	
+	
+#birthdaylogo {
+	float:left;
+}
+
+/*registration submit button*/
+#regsubmit {
+	background:linear-gradient(to bottom right, #33acff, #174AE3);
+	border-color:linear-gradient(to bottom right, #33acff, #174AE3);
+	color:#fff;
+	font-size:0.8em;
+	border-radius:0.7em;
+	cursor:pointer;
+	font-family:'Bree Serif', serif, times new roman;
+	font-weight:bold;
+	padding:1em 2em 1em 2em;
+	width:27em;
+}
+
+#regsubmit:hover{
+	background:linear-gradient(to bottom right, #66dfff, #3399ff);
+	padding-right:4em;
+	transition:0.8s;
+}
+
+/*registration form reset*/
+#resetword {
+	font-size:0.7em;
+}
+
+#regreset {
+	background:linear-gradient(to bottom right, #e8e8e8, #b9b9b9);
+	font-size:0.6em;
+	border-radius:5px;
+	cursor:pointer;
+	font-family:'Bree Serif', serif, times new roman;
+	font-weight:bold;
+	padding:0.5em;
+}
+
+#regreset:hover {
+	background:linear-gradient(to bottom right, #e4e4e4, #d1d1d1);
+}
+
+#choicetopic {
+	font-size:1em;
+	font-family:'PT Sans', serif;
+	color:#fff;
+	position:absolute;
+	top:22.5em;
+	background-color:#B9B9B9;
+	padding:1em;
+	width:97.5%;
+}
+
+#choicetopic h1 {
+	text-align:center;
+}
+
+.choicestem {
+	position:absolute;
+	top:2em;
+	left:16em;
+}
+
+/*choice pictures*/
+.choiceimgs {
+	position:absolute;
+	top:0.01em;
+}
+
+.choiceimg1 {
+	float:left;
+	width:50%;
+	height:500px;
+}
+
+.choiceimg2 {
+	float:left;
+	width:50%;
+	height:500px;
+}
+
+.choiceimg3 {
+	float:left;
+	width:50%;
+	height:500px;
+}
+
+.choiceimg4 {
+	float:left;
+	width:50%;
+	height:500px;
+}
+
+.squareword1 button{
+	border:none;
+	border-radius:0.5em;
+	padding:2em;
+	width:20%;
+	position:relative;
+	top:31em;
+	left:9em;
+	z-index:99;
+	background-color:#3333cc;
+	opacity:0.8;
+}
+
+.squareword2 button{
+	border:none;
+	border-radius:0.5em;
+	padding:2em;
+	width:20%;
+	position:relative;
+	top:26em;
+	left:42em;
+	z-index:99;
+	background-color:#FF2E2E;
+	opacity:0.8;
+}
+
+.squareword3 button{
+	border:none;
+	border-radius:0.5em;
+	padding:2em;
+	width:20%;
+	position:relative;
+	top:45em;
+	left:9em;
+	z-index:99;
+	background-color:#ff3300;
+	opacity:0.8;
+}
+
+.squareword4 button{
+	border:none;
+	border-radius:0.5em;
+	padding:2em;
+	width:20%;
+	position:relative;
+	top:40em;
+	left:41em;
+	z-index:99;
+	background-color:#B000E8;
+	opacity:0.8;
+}
+
+.choicesquare1 img:hover, .choicesquare2 img:hover, .choicesquare3 img:hover, .choicesquare4 img:hover {
+	filter:blur(2px);
+}
+
+#science, #tech, #engineer, #maths {
+	font-size:1.3em;
+	color:#fff;
+	font-family:'Arvo', serif;
+}
+
+#science:hover, #tech:hover, #engineer:hover, #maths:hover {
+	cursor:pointer;
+}
+
+/*footer*/
+footer {
+	width:100%;
+	background:#ff0000;
+	font-family: 'Arvo', serif;
+	color:#fff;
+}
+
+.footercontent {
+	width:80%;
+	margin-left:17em;
+}
+
+#footerstem {
+	float:left;
+	width:300px;
+	height:200px;
+	margin-top:2em;
+	margin-right:3em;
+	border-radius:1em;
+}
+
+footer .emailtel{
+	text-decoration:none;
+	color:#fff;
+}

@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	
+	<title>Home</title>
+	
+		<link rel="stylesheet" type="text/css" href="styleshome.css">
+		<link href="https://fonts.googleapis.com/css?family=Arvo" rel="stylesheet" type="text/css">
+	
+	<script>
+		function openNav() {
+			document.getElementById("navBox").style = "margin-left:2em;margin-right:500em;";
+			document.getElementById("navBox").style = "padding-top:1em;padding-left:0;padding-right:0;";
+			document.getElementById("navBox").style.height = "27em";
+			document.getElementById("navBox").style.width = "13em";
+			document.getElementById("openNav").style.display = "none";
+			document.getElementById("sideNav").style.display = "initial";
+		}
+		
+		function closeNav() {
+			document.getElementById("navBox").style = "margin-right:82em;margin-left:5em;";
+			document.getElementById("navBox").style = "padding-top:5em;padding-left:1em;padding-right:1em;padding-bottom:1em;";
+			document.getElementById("navBox").style = "position:absolute;top:0;";
+			document.getElementById("sideNav").style.display = "none";
+			document.getElementById("openNav").style.display = "initial";
+		}
+		
+
+	</script>
+	
+</head>
+
+<body>
+	<nav>
+		<div id="navBox">
+			<span onclick="openNav()" id="openNav">&#9776;&nbsp;&nbsp;Menu</span>
+			<div id="sideNav">
+				<span onclick="closeNav()" id="cross">&times;</span>
+				
+				<div class="navContents">
+					<p>	
+						<img src="STEM Logo.png" alt="STEM" width="30px" height="30px">
+						<a href="Home.html" target="_blank">STEM</a>
+						<br><br>
+						<img src="imgs/loginicon.png" alt="Login" width="30px" height="30px">
+						<a href="Login Page.html" target="_blank">Login</a>
+					</p>
+				</div> <!-- END navContents -->
+			</div> <!-- END sideNav -->
+		</div> <!-- END navBox -->
+	</nav>
+		
+	<!-- Slideshow container -->
+	<div class="slideshow-container" id="top">
+
+		<div class="mySlides">
+			<div class="fade">
+				<img src="imgs/img1.jpg" width="100%" height="500px">
+			</div><!-- END fade -->	
+		</div><!-- END slides -->
+
+		<div class="mySlides">
+			<div class="fade">
+				<img src="imgs/img2.jpg" width="100%" height="500px">		
+			</div><!-- END fade -->
+		</div><!-- END slides -->
+
+		<div class="mySlides">
+			<div class="fade">		
+				<img src="imgs/img3.png" width="100%" height="500px">		
+			</div><!-- END fade -->
+		</div><!-- END slides -->
+
+		<div class="mySlides">
+			<div class="fade">		
+				<img src="imgs/img4.jpg" width="100%" height="500px">		
+			</div><!-- END fade -->
+		</div><!-- END slides -->
+		
+		<div class="mySlides">
+			<div class="fade">		
+				<img src="imgs/img5.jpg" width="100%" height="500px">		
+			</div><!-- END fade -->
+		</div><!-- END slides -->
+
+	</div><!-- END slideshow-container -->	
+	
+	<br>
+	
+	<div style="text-align:center">
+		<span class="dot"></span> 
+		<span class="dot"></span> 
+		<span class="dot"></span> 
+		<span class="dot"></span>
+		<span class="dot"></span>
+		</div>
+	
+	<script>
+	
+		var slideIndex = 0;
+		showSlides();
+
+		function showSlides() {
+			var i;
+			var slides = document.getElementsByClassName("mySlides");
+			
+			slides.style="width:100%;height:30%;"
+			
+			var dots = document.getElementsByClassName("dot");
+			for (i = 0; i < slides.length; i++) {
+				   slides[i].style.display = "none";  
+			}
+			slideIndex++;
+			if (slideIndex > slides.length) {slideIndex = 1}    
+			for (i = 0; i < dots.length; i++) {
+				dots[i].className = dots[i].className.replace(" activedot", "");
+			}
+			slides[slideIndex-1].style.display = "block";  
+			dots[slideIndex-1].className += " activedot";
+			setTimeout(showSlides, 4000); // Change image every 4 seconds
+		}
+	
+	</script>
+	
+	<br><br>
+	
+	<div class="home">
+		
+		<h1 id="hometitle"><img src="STEM.jpg" alt="STEM" width="500px" height="200px"></h1>
+		<br>
+		<div class="stemdef1">
+			<h1 id="whatisstem">What is STEM?</h1>
+			<br>
+			<p>STEM encompasses fields that are collectively considered the core technological underpinnings of an advanced society. 
+			Co-founders, Melissa and Lavanya, are mechanical engineers with a passion for promoting STEM literacy for all. 
+			They believe in exciting students about STEM through fun, hands-on experiences where real learning occurs.</p>
+		</div> <!-- END stemdef1 -->
+		
+		<img src="STEM def.jpeg" alt="STEM logo" id="stemdefpic">
+		
+		<br><br><br><br><br><br><br><br>
+		<hr>
+		<br>
+		
+		<img src="probsol.jpg" alt="STEM logo" id="probsolpic">
+		
+		<div class="stemdef2">
+			<p>What separates STEM from the traditional science and math education is the blended learning environment 
+			and showing students how the scientific method can be applied to everyday life. It teaches students computational 
+			thinking and focuses on the real world applications of problem solving. Rather than teach the four disciplines as 
+			separate and discrete subjects, STEM integrates them into a cohesive learning paradigm based on real-world.</p>
+		</div> <!-- END stemdef2 -->
+		
+		<br><br>
+		<hr>
+		<br>		
+		
+		<img src="femaleinstem.jpg" alt="STEM logo" id="femalestempic">
+		<div class="stemdef3">
+			<p>Much of the STEM curriculum is aimed toward attracting underrepresented populations. Female students, 
+			for example, are significantly less likely to pursue a college major or career. Though this is nothing new, 
+			the gap is increasing at a significant rate. Male students are also more likely to pursue engineering and technology fields, 
+			while female students prefer science fields, like biology, chemistry, and marine biology. Overall, male students are three times 
+			more likely to be interested in pursuing a STEM career, the STEMconnect report said.</p>
+		</div> <!-- END stemdef3 -->
+		<br><br><br><br><br><br><br><br>
+		<p class="backtotop"><a href="#top">&#8593&nbsp;Back to top</a></p>
+	</div> <!-- END home -->
+	
+	<footer>
+		<div class="footercontent">
+			<img src="footerstem.jpg" alt="STEM" id="footerstem">
+			<br>
+			<br>
+			<p class="foothead">Contact Us<br></p>
+			<br>
+			<p class="footdetail">
+			Quest International University Perak<br>
+			No. 227, Plaza Teh Teng Seng (Level 2)
+			Jalan Raja Permaisuri Bainun,<br>
+			30250 Ipoh, Perak Darul Ridzuan.<br><br>
+			Telephone: <a href="tel:(909)624-0624" class="emailtel">(909)624-0624</a><br>
+			Email: <a href="mailto:info@stemcenterusa.com" class="emailtel">enquiries@qiup.edu.my</a><br></p>
+			<br>
+			<p>Ho Jing Heng BCS1103 &copy; 2018</p>
+			<br>
+		</div> <!--END footercontent -->
+	</footer>
+
+</body>
+
+</html>

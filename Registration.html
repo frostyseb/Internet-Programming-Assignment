@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	
+	<title>Registration</title>
+	
+	<link rel="stylesheet" type="text/css" href="styles.css">
+	
+	<script>
+		function openNav() {
+			document.getElementById("navBox").style = "margin-left:2em;margin-right:500em;";
+			document.getElementById("navBox").style = "padding-top:1em;padding-left:0;padding-right:0;";
+			document.getElementById("navBox").style.height = "27em";
+			document.getElementById("navBox").style.width = "13em";
+			document.getElementById("openNav").style.display = "none";
+			document.getElementById("sideNav").style.display = "initial";
+		}
+		
+		function closeNav() {
+			document.getElementById("navBox").style = "margin-right:82em;margin-left:5em;";
+			document.getElementById("navBox").style = "padding-top:5em;padding-left:1em;padding-right:1em;padding-bottom:1em;";
+			document.getElementById("navBox").style = "position:absolute;top:0;";
+			document.getElementById("sideNav").style.display = "none";
+			document.getElementById("openNav").style.display = "initial";
+		}
+		
+		function tipsname() {
+			document.getElementById("nametips").innerHTML = "*Tip: The name field cannot be empty";
+		}
+	
+		function tipsic() {
+			document.getElementById("ictips").innerHTML = "*Tip: The I/C number must contain 12 digits, eg: 999999-99-9999";
+		}
+		
+		function blank() {
+			document.getElementById("nametips").innerHTML = " ";
+			document.getElementById("ictips").innerHTML = " ";
+		}
+		
+		function validation() {
+			var iccheck = /^(\d{2})(\d{2})(\d{2})\-(\d{2})\-(\d{2})(\d{2})$/;
+			var x = document.forms["regform"]["icnumber"].value;
+			var y = document.forms["regform"]["name"].value;
+
+			
+			
+			if (y == "") {
+				alert("The name must be entered.");
+				return false;
+			}
+			else if (x == "") {
+				alert("The I/C number must be entered.");
+				return false;
+			}
+			else if (iccheck.test(x) == false) {
+				alert("The format of the I/C number is wrong.");
+				return false;
+			}
+		}
+		
+		function generate() {
+			var yr = document.getElementById("icnumber").value;
+			var mth = document.getElementById("icnumber").value;
+			var dy = document.getElementById("icnumber").value;
+			
+			var present = new Date().getFullYear().toString();
+			var decade = present.substr(0, 2);
+			var year = yr.substr(0, 2);
+			var month = mth.substr(2, 2);
+			var day = dy.substr(4, 2);
+			
+			var gdr = document.getElementById("icnumber").value;
+			var gender = gdr.substr(10);
+			var genderfinal = parseInt(gender);
+			
+			if (decade > year) {
+				var yearfinal = parseInt(decade.concat(year.toString()), 10);
+			}
+			else {
+				var yearfinal = parseInt("19".concat(year.toString()), 10);
+			}
+			
+			if(genderfinal%2 == 0){
+				document.getElementById("gender").innerHTML = "female";
+			}
+			else {
+				document.getElementById("gender").innerHTML = "male";
+			}
+			
+			document.getElementById("birthday").innerHTML = day + "/" + month + "/" + yearfinal;
+
+		}
+	</script>
+	
+</head>
+
+<body>
+	<nav>
+		<div id="navBox">
+			<span onclick="openNav()" id="openNav">&#9776;&nbsp;&nbsp;Menu</span>
+			<div id="sideNav">
+				<span onclick="closeNav()" id="cross">&times;</span>
+				
+				<div class="navContents">
+					<p>	
+						<img src="STEM Logo.png" alt="STEM" width="30px" height="30px">
+						<a href="Home.html" target="_blank">What is STEM?</a>
+					</p>
+				</div> <!-- END navContents -->
+			</div> <!-- END sideNav -->
+		</div> <!-- END navBox -->
+	</nav>
+		
+	<div class="memreg">
+		<p class="pic"><a href="Home.html" target="_blank"><img src="STEM.jpg" alt="STEM" width="400em" height="150em" id="stem"></a></p>
+		<br>
+
+		<h1>Membership Registration</h1>
+		<br>
+		<form onsubmit="validation()" name="regform" action="memreg.php" method="post">
+			Name:<br><br>
+			<input type="text" name="name" id="name" onfocus="tipsname()" onblur="blank()"> <br>
+			<p id="nametips"></p> <br>
+			Identity card number (I/C no.):<br><br>
+			<input type="text" name="icnumber" id="icnumber" onfocus="tipsic()" onblur="blank()"> <br>
+			<p id="ictips"></p>
+			<br>
+			<button id="regformconfirm" onclick="generate()" type="button">Register</button>
+			
+			<br><br><br>
+			
+			<div class="birthdaygroup">
+				<img src="cake.png" alt="Birthday Cake" width="35px" height="35px" id="birthdaylogo"><p id="yourbirth">&nbsp;&nbsp;Your birthday is <span id="birthday"></span></p>
+			</div> <!-- END birthdaygroup -->
+			<br>
+			<div class="logogroup">
+				<img src="gender.png" alt="Gender Logo" width="35px" height="35px" id="birthdaylogo"><p id="yourgender">&nbsp;&nbsp;Your gender is <span id="gender"></span></p>
+			</div> <!-- END logogroup -->
+			
+			<br>
+			
+			<p id="resetword">Incorrect birthday or gender?&emsp;<input type="reset" value="Click here to reset" id="regreset"></p>
+			
+			<br>
+			<input type="submit" value="Start The Quiz Now! &gt;&gt;" id="regsubmit">
+		</form>
+		
+		
+	</div> <!-- END memreg -->
+	
+</body>
+
+</html>

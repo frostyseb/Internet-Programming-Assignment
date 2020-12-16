@@ -1,0 +1,220 @@
+/*CSS Styling for home page*/
+
+* {
+	padding:0;
+	margin:0;
+}
+
+/*Navigation icon*/
+#openNav {
+	z-index:999;
+	color:white;
+	font-size:1.5em;
+	display:block;
+	cursor:pointer;
+}
+
+#openNav:hover {
+	color:#ffbebe;
+}
+
+/*Navigation box*/
+#navBox {
+	background:linear-gradient(to bottom, #ff3366, #ff0000);
+	position:absolute;	
+	top:0;
+	padding-top:5em;
+	padding-bottom:1em;
+	padding-right:1em;
+	padding-left:1em;
+	margin-right:83em;
+	margin-left:5em;
+	z-index:9999;
+	overflow-x:hidden;
+	transition:1s;
+}
+
+/*navigation*/
+#sideNav {
+	display:none;
+	margin:0;
+}
+
+/*the cross symbol*/
+#cross {
+	color:#fff;
+	font-size:3em;
+	margin:1em 1em 1em 3.5em;
+	cursor:pointer;
+}
+
+#cross:hover {
+	color: #ff9999;
+}
+
+/*Navigation contents*/
+.navContents p {
+	font-size:1.9em;
+	margin:0.5em 0.3em 0 0.3em;
+}
+
+.navContents p a{
+	text-decoration:none;
+	color:#fff;
+}
+
+.navContents p a:hover{
+	color:#ffc7c7;
+}
+
+
+/* Slideshow container */
+.slideshow-container {
+  max-width: 100%;
+  position: relative;
+  margin:0;
+}
+
+.mySlides {
+	display: none;
+}
+
+/* The dots/bullets/indicators */
+.dot {
+  height: 15px;
+  width: 15px;
+  margin: 0 2px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
+
+.activedot {
+  background-color: #717171;
+}
+
+/* Fading animation */
+.fade {
+  -webkit-animation-name: fade;
+  -webkit-animation-duration: 1.5s;
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+@-webkit-keyframes fade {
+  from {opacity: .4} 
+  to {opacity: 1}
+}
+
+@keyframes fade {
+  from {opacity: .4} 
+  to {opacity: 1}
+}
+
+.home {
+	width:80%;
+	margin:auto;
+	margin-bottom:8em;
+	line-height:2em;
+	text-align:justify;
+	background:linear-gradient(to bottom, #FFFFB9, #FFFF74);
+	padding:3em;
+	border-radius:2em;
+}
+
+#hometitle {
+	margin-bottom:0.5em;
+	text-align:center;
+}
+
+#hometitle img{
+	border-radius:0.2em;
+}
+
+#whatisstem {
+	font-family: 'Arvo', serif;
+}
+
+.stemdef1 {
+	width:70%;
+	float:left;
+	font-family: 'Arvo', serif;
+	font-size:1.1em;
+	color:#000;
+}
+
+#stemdefpic {
+	width:270px;
+	height:200px;
+	float:right;	
+	border-radius:1em;
+}
+
+#probsolpic {
+	width:320px;
+	height:180px; 
+	border-radius:1em;
+}
+
+.stemdef2 {
+	width:65%;
+	float:right;
+	font-family: 'Arvo', serif;
+	font-size:1.1em;
+	color:#000;
+}
+
+.stemdef3 {
+	width:67%;
+	float:left;
+	font-family: 'Arvo', serif;
+	font-size:1.1em;
+	color:#000;
+}
+
+#femalestempic {
+	width:317px;
+	height:200px; 
+	float:right;
+	border-radius:1em;
+}
+
+.backtotop {
+	float:right;
+	font-size:1em;
+	font-family: 'Arvo', serif;
+	color:#000;
+}
+
+.backtotop a {
+	text-decoration:none;
+	color:#000;
+}
+
+/*footer*/
+footer {
+	width:100%;
+	background:#ff0000;
+	font-family: 'Arvo', serif;
+	color:#fff;
+}
+
+.footercontent {
+	width:80%;
+	margin-left:17em;
+}
+
+#footerstem {
+	float:left;
+	width:300px;
+	height:200px;
+	margin-top:2em;
+	margin-right:3em;
+	border-radius:1em;
+}
+
+footer .emailtel{
+	text-decoration:none;
+	color:#fff;
+}

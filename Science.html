@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+	<title>Select Your Quiz</title>
+	
+	<link rel="stylesheet" type="text/css" href="styles.css">
+	
+	<link href="https://fonts.googleapis.com/css?family=Arvo|PT-Sans" rel="stylesheet">
+	
+	<script>		
+		function openNav() {
+			document.getElementById("navBox").style = "margin-left:2em;margin-right:500em;";
+			document.getElementById("navBox").style = "padding-top:1em;padding-left:0;padding-right:0;";
+			document.getElementById("navBox").style.height = "27em";
+			document.getElementById("navBox").style.width = "13em";
+			document.getElementById("openNav").style.display = "none";
+			document.getElementById("sideNav").style.display = "initial";
+		}
+		
+		function closeNav() {
+			document.getElementById("navBox").style = "margin-right:82em;margin-left:5em;";
+			document.getElementById("navBox").style = "position:absolute;top:0;";
+			document.getElementById("sideNav").style.display = "none";
+			document.getElementById("openNav").style.display = "initial";
+		}
+	</script>
+	
+</head>
+
+<body>
+		
+	<nav>
+		<div id="navBox">
+			<span onclick="openNav()" id="openNav">&#9776;&nbsp;&nbsp;Menu</span>
+			<div id="sideNav">
+				<span onclick="closeNav()" id="cross">&times;</span>
+				
+				<div class="navContents">
+					<p>
+						<img src="STEM Logo.png" alt="STEM" width="30px" height="30px">
+						<a href="Home.html" target="_blank">What is STEM?</a>
+					</p>
+				</div> <!-- END navContents -->
+			</div> <!-- END sideNav -->
+		</div> <!-- END navBox -->
+	</nav>
+		
+	
+	
+</body>
+
+</html>
